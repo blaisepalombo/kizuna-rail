@@ -302,3 +302,18 @@
         }
     }
 }
+
+/* Filters layout */
+#filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 767px) {
+    #filters {
+        grid-template-columns: 1fr;
+    }
+}

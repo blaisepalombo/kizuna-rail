@@ -417,3 +417,16 @@ article.confirmation-page {
         }
     }
 }
+
+/* Additional broad print rules to ensure clean single-page printing */
+@media print {
+    /* Remove navigation, interactive elements, and extras */
+    header, nav, footer, .confirmation-actions, .btn, .btn-primary, .btn-secondary, .mobile-menu, .logo a { display: none !important; }
+
+    /* Ensure confirmation content is full width and readable */
+    body, html { background: #fff !important; color: #000 !important; }
+    article.confirmation-page { max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
+
+    /* Avoid page breaks inside key sections */
+    .confirmation-header, .confirmation-content, .passenger-info-card, .details-grid, .passengers-list { page-break-inside: avoid; }
+}
